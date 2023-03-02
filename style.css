@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: #E3F2FD;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    top: 47%;
+    left: 31%;
+}
+.main p{
+    margin: 53px 6px 0 0;
+    position: absolute;
+}
+.popup{
+    width: 490px;
+    left: 50%;
+    top: -25%;
+    position: absolute;
+    background: #FFF;
+    border-radius: 5px;
+    visibility: hidden;
+    display: flex;
+    padding: 13px 17px 20px;
+    border-top: 3px solid #EA4D67;
+    transform: translate(-50%);
+    transition: all  0.25s ease;
+    box-shadow: 0 10px 25px #EA4D67;
+}
+.popup.show{
+    top: 0;
+    visibility: visible;
+}
+.popup.online{
+    border-top: 3px solid #2ECC71;
+    box-shadow: 0 10px 25px #2ECC71;
+}
+.popup .icon img{
+    width: 40px;
+    height: 40px;
+    margin-right: 17px;
+}
+.popup .title{
+    font-size: 1.2rem;
+}
+.popup .desc{
+    color: #474747;
+    margin: 3px 0 10px;
+    font-size: 1.04rem;
+}
+.popup .reconnect{
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 9px 15px;
+    border-radius: 4px;
+    background: #5372F0;
+}
+.popup.online .reconnect{
+    background: #bfbfbf;
+    pointer-events: none;
+}
+@media screen and (max-width:550px){
+    .popup{
+        width: 100%;
+        padding: 10px 15px 17px;
+    }
+}
